@@ -187,18 +187,18 @@ export default function FlowerScreen({ onRestart }) {
                 fontStyle: 'italic',
                 lineHeight: 1.1,
               }}>
-                A Special Bouquet For
+                Buket Bunga Buat Kesayangan
               </div>
               <h2 style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: landscapeMode ? '2.1rem' : '2.4rem',
+                fontSize: landscapeMode ? '2.1rem' : '2.5rem',
                 color: '#1e40af',
                 lineHeight: 1.05,
                 margin: '2px 0 0 0',
                 letterSpacing: '-0.5px',
                 textShadow: '0 2px 10px rgba(59, 130, 246, 0.2)',
               }}>
-                James 🍵✨
+                Zaid
               </h2>
             </div>
 
@@ -209,13 +209,13 @@ export default function FlowerScreen({ onRestart }) {
               padding: '14px 16px',
               border: '1px solid rgba(122, 154, 96, 0.3)',
               boxShadow: '0 4px 16px rgba(15, 23, 42, 0.06)',
-              lineHeight: 1.7,
-              fontSize: '0.84rem',
+              lineHeight: 1.75,
+              fontSize: '0.86rem',
               color: 'var(--berry)',
               textAlign: 'left',
             }}>
               <p style={{ marginBottom: 12, fontWeight: 500 }}>
-                Selamat ulang tahun yang ke-21, James. Semoga di usia yang baru ini, kamu senantiasa dikelilingi kebahagiaan, kedamaian, dan kehangatan. Terima kasih atas segala kebaikan dan inspirasi yang kamu hadirkan. 🍵✨
+                Bunga ini spesial buat kamu di hari ulang tahunmu. Makasih udah selalu bikin aku ngerasa beruntung punya kamu. Jangan bosen dengerin manjanya aku yaa. I love you to the moon and back!
               </p>
               
               <div style={{
@@ -223,11 +223,11 @@ export default function FlowerScreen({ onRestart }) {
                 paddingTop: 10,
                 marginTop: 10,
                 fontFamily: 'var(--font-display)',
-                fontSize: '1.15rem',
+                fontSize: '1.25rem',
                 color: '#1e40af',
                 lineHeight: 1.35,
               }}>
-                Selamat Ulang Tahun Ke-21, James 🍵✨
+                Selamat Ulang Tahun, Sayang!
               </div>
             </div>
 
@@ -245,7 +245,7 @@ export default function FlowerScreen({ onRestart }) {
             fontSize: '0.9rem',
           }}
         >
-          Ulangi Tampilan 🔄
+          Ulangi Dari Awal
         </button>
       </div>
 

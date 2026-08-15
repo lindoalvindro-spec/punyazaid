@@ -116,14 +116,10 @@ export default function SplashScreen({ onStart }) {
   };
 
   const sparkleData = [
-    { emoji: '🍵', top: '8%', left: '7%', size: '1.3rem' },
-    { emoji: '🍃', top: '14%', right: '8%', size: '1.2rem' },
-    { emoji: '🎉', top: '26%', left: '5%', size: '1.2rem' },
-    { emoji: '💙', top: '24%', right: '6%', size: '1.1rem' },
-    { emoji: '🌿', bottom: '20%', left: '8%', size: '1.2rem' },
-    { emoji: '💫', bottom: '18%', right: '7%', size: '1.2rem' },
-    { emoji: '🍵', top: '42%', left: '4%', size: '1rem' },
-    { emoji: '✨', top: '38%', right: '4%', size: '1.2rem' },
+    { emoji: '✨', top: '10%', left: '8%', size: '1.1rem' },
+    { emoji: '💙', top: '18%', right: '10%', size: '1rem' },
+    { emoji: '✨', bottom: '24%', left: '8%', size: '1rem' },
+    { emoji: '💙', bottom: '20%', right: '9%', size: '1rem' },
   ];
 
   return (
@@ -132,16 +128,16 @@ export default function SplashScreen({ onStart }) {
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', overflow: 'hidden', padding: '16px 0',
     }}>
-      {/* Background Hero Photo (james 1.jfif) */}
+      {/* Background Hero Photo (zaid 8.jpeg) */}
       <img
         ref={photoRef}
-        src="/james 1.jfif"
-        alt="Happy Birthday Sayangku"
+        src="/zaid 8.jpeg"
+        alt="Happy Birthday Zaid"
         style={{
           position: 'absolute', inset: 0, width: '100%', height: '100%',
           objectFit: 'cover', opacity: 0,
         }}
-        onError={(e) => { e.target.src = '/james 1.jfif'; }}
+        onError={(e) => { e.target.src = '/zaid 8.jpeg'; }}
       />
 
       {/* Luxury Dark Gradient Overlay for Maximum Readability */}
@@ -169,7 +165,7 @@ export default function SplashScreen({ onStart }) {
             position: 'absolute', fontSize: s.size, opacity: 0,
             top: s.top, left: s.left, right: s.right, bottom: s.bottom,
             pointerEvents: 'none', zIndex: 2,
-            filter: 'drop-shadow(0 0 8px rgba(122,154,96,0.7))',
+            filter: 'drop-shadow(0 0 8px rgba(59,130,246,0.6))',
           }}
         >{s.emoji}</span>
       ))}
@@ -180,12 +176,10 @@ export default function SplashScreen({ onStart }) {
         padding: '0 20px', maxWidth: 350, width: '100%',
       }}>
 
-        {/* Floating Sparkling 100 Badge */}
+        {/* Floating Sparkling Birthday Badge */}
         <div ref={num20Ref} style={{ opacity: 0, marginBottom: 8, display: 'inline-block' }}>
           <div className="sparkling-20-badge">
-            <span className="sparkle-icon-left">✨</span>
-            <span className="sparkling-20-text">21</span>
-            <span className="sparkle-icon-right">🍵</span>
+            <span className="sparkling-20-text" style={{ fontSize: '1.6rem' }}>HBD</span>
           </div>
         </div>
 
@@ -200,46 +194,46 @@ export default function SplashScreen({ onStart }) {
         }}>
           <Crown size={14} color="var(--gold-accent)" />
           <span className="sparkling-birthday-text">
-            Happy 21st Birthday! 🍵✨
+            Happy Birthday, Sayang!
           </span>
         </div>
 
         {/* Subtitle */}
         <p ref={line1Ref} style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.78rem', fontWeight: 600,
-          color: 'rgba(224,242,254,0.9)', letterSpacing: '1.8px', textTransform: 'uppercase',
+          fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 600,
+          color: 'rgba(224,242,254,0.9)', letterSpacing: '1.5px', textTransform: 'uppercase',
           marginBottom: 4, opacity: 0,
         }}>
-          Special Exhibition Dedicated To
+          Hari spesialnya orang favorit aku
         </p>
 
-        {/* Main Title: James */}
+        {/* Main Title: Zaid */}
         <h1 ref={line2Ref} style={{
-          fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: '#fff',
+          fontFamily: 'var(--font-display)', fontSize: '2.6rem', color: '#fff',
           lineHeight: 1.15, marginBottom: 10, opacity: 0,
           textShadow: '0 4px 20px rgba(59, 130, 246, 0.7), 0 0 35px rgba(122, 154, 96, 0.5)',
         }}>
-          James
+          Zaid
         </h1>
 
         {/* Birthday Wish Box & Tagline */}
         <div ref={line3Ref} style={{ opacity: 0 }}>
           <div className="birthday-greeting-box">
             <p style={{
-              fontFamily: 'var(--font-display)', fontSize: '1.25rem',
+              fontFamily: 'var(--font-display)', fontSize: '1.3rem',
               color: '#dcfce7', margin: 0, lineHeight: 1.3,
               textShadow: '0 2px 10px rgba(0,0,0,0.5)',
             }}>
-              "Selamat Ulang Tahun yang ke-21, James" 🍵✨
+              "Selamat Ulang Tahun, Zaid"
             </p>
           </div>
 
           <p style={{
-            fontFamily: 'var(--font-cute)', fontSize: '0.78rem',
+            fontFamily: 'var(--font-cute)', fontSize: '0.8rem',
             color: '#bfdbfe', fontWeight: 600, marginBottom: 20,
-            letterSpacing: '0.5px'
+            letterSpacing: '0.4px'
           }}>
-            A Special Dedicated Collection of Moments & Memories 🌿✨
+            Kado kecil buat nemenin hari spesial kamu hari ini.
           </p>
         </div>
 
@@ -260,7 +254,7 @@ export default function SplashScreen({ onStart }) {
           onPointerUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
           onPointerLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
         >
-          Jelajahi Galeri Ulang Tahun 🍃
+          Buka Kadonya Sekarang
         </button>
 
       </div>

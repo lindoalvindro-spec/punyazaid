@@ -140,12 +140,10 @@ export default function BirthdayCake({ onShowGallery }) {
   };
 
   const bgParticles = [
-    { emoji: '🍵', top: '10%', left: '8%', size: '1.2rem' },
-    { emoji: '🍃', top: '18%', right: '10%', size: '1rem' },
-    { emoji: '⭐', top: '40%', left: '5%', size: '0.9rem' },
-    { emoji: '💙', top: '55%', right: '6%', size: '1.1rem' },
-    { emoji: '🌿', bottom: '25%', left: '10%', size: '1rem' },
-    { emoji: '👑', bottom: '20%', right: '12%', size: '1.2rem' },
+    { emoji: '✨', top: '10%', left: '8%', size: '1.1rem' },
+    { emoji: '💙', top: '22%', right: '10%', size: '1rem' },
+    { emoji: '✨', bottom: '25%', left: '10%', size: '1rem' },
+    { emoji: '💙', bottom: '20%', right: '12%', size: '1rem' },
   ];
 
   return (
@@ -158,7 +156,7 @@ export default function BirthdayCake({ onShowGallery }) {
             position: 'absolute',
             top: p.top, left: p.left, right: p.right, bottom: p.bottom,
             fontSize: p.size, pointerEvents: 'none', zIndex: 0, opacity: 0.65,
-            filter: 'drop-shadow(0 0 8px rgba(122,154,96,0.4))'
+            filter: 'drop-shadow(0 0 8px rgba(59,130,246,0.4))'
           }}
         >
           {p.emoji}
@@ -177,16 +175,16 @@ export default function BirthdayCake({ onShowGallery }) {
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
             <Sparkles size={18} color="#7a9a60" />
             <h2 style={{
-              fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--berry)',
+              fontFamily: 'var(--font-display)', fontSize: '2.1rem', color: 'var(--berry)',
               lineHeight: 1.15, marginBottom: 4
-            }}>Make a Wish, James 🍵✨</h2>
+            }}>Make a Wish, Zaid</h2>
             <Sparkles size={18} color="#3b82f6" />
           </div>
           <p style={{
-            fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: '#2563eb',
+            fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: '#2563eb',
             fontWeight: 600, margin: 0, opacity: 0.9, transition: 'all 0.3s ease'
           }}>
-            {lit ? 'Ketuk lilin untuk memadamkan apinya 🕯️' : '✨ Doa dan harapanmu telah terpanjatkan 🌿'}
+            {lit ? 'Pejamkan mata, minta harapan terbaik kamu, terus tiup lilinnya yaa' : 'Harapan baik kamu udah tercatat, semoga terkabul yaa'}
           </p>
         </div>
 
@@ -250,9 +248,7 @@ export default function BirthdayCake({ onShowGallery }) {
             boxShadow: 'inset 0 4px 10px rgba(255,255,255,0.6), 0 6px 16px rgba(15,23,42,0.15)',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, zIndex: 4,
           }}>
-            <span style={{ fontSize: '1rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }}>🍵</span>
-            <span style={{ fontSize: '1rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }}>🍃</span>
-            <span style={{ fontSize: '1rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.15))' }}>🍵</span>
+            <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 700 }}>✨</span>
           </div>
 
           {/* Elegant Cream Drips */}
@@ -288,7 +284,7 @@ export default function BirthdayCake({ onShowGallery }) {
                 fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: '#1e40af',
                 fontWeight: 700, letterSpacing: '0.5px', margin: 0, lineHeight: 1.1
               }}>
-                Happy Birthday James! 🍵💙
+                Happy Birthday, Zaid!
               </span>
             </div>
           </div>
@@ -321,7 +317,7 @@ export default function BirthdayCake({ onShowGallery }) {
             <span style={{
               fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: 'var(--pink-deep)', fontWeight: 700
             }}>
-              Lilin telah dipadamkan dengan indah ✨
+              Lilinnya udah padam, yeay!
             </span>
           </div>
         )}
@@ -329,11 +325,11 @@ export default function BirthdayCake({ onShowGallery }) {
         {/* CTA Button */}
         {lit ? (
           <button className="btn-primary" onClick={blow} style={{ width: '100%', padding: '16px 20px', fontSize: '0.95rem' }}>
-            <Flame size={18} fill="#fff" /> Tiup Lilin 🕯️
+            <Flame size={18} fill="#fff" /> Tiup Lilinnya
           </button>
         ) : (
           <button className="btn-primary" onClick={onShowGallery} style={{ width: '100%', padding: '16px 20px', fontSize: '0.95rem' }}>
-            Lihat Galeri Foto 📷 <Camera size={18} />
+            Lihat Foto-Foto Lucu Kamu <Camera size={18} />
           </button>
         )}
       </div>

@@ -113,9 +113,9 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
                 boxShadow: '0 12px 32px rgba(59,130,246,0.25)',
                 position: 'relative', zIndex: 1
               }}>
-                <img src="/james 1.jfif" alt="James" style={{
+                <img src="/zaid 10.jpeg" alt="Zaid" style={{
                   width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center'
-                }} onError={(e) => { e.target.src = '/james 1.jfif'; }} />
+                }} onError={(e) => { e.target.src = '/zaid 10.jpeg'; }} />
               </div>
             </div>
 
@@ -124,15 +124,15 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
               fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: '#4a6b34',
               letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 4, fontWeight: 700
             }}>
-              Kartu Ucapan Ulang Tahun 🍵✨
+              Kartu Spesial
             </h3>
             
             <div className="reveal-el" style={{ textAlign: 'center', marginBottom: 18 }}>
               <h1 style={{
-                fontFamily: 'var(--font-display)', fontSize: '2.5rem', color: '#1e40af',
+                fontFamily: 'var(--font-display)', fontSize: '2.6rem', color: '#1e40af',
                 lineHeight: 1, margin: 0
               }}>
-                James 🍵✨
+                Zaid
               </h1>
             </div>
 
@@ -143,19 +143,19 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
 
             {/* Message */}
             <p className="reveal-el" style={{
-              fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'var(--berry-light)',
-              lineHeight: 1.7, marginBottom: 24, fontStyle: 'italic', padding: '0 6px'
+              fontFamily: 'var(--font-body)', fontSize: '0.88rem', color: 'var(--berry-light)',
+              lineHeight: 1.75, marginBottom: 24, fontStyle: 'italic', padding: '0 6px'
             }}>
-              "Selamat ulang tahun yang ke-21, James. Semoga setiap langkahmu senantiasa dipenuhi keberkahan, kesehatan, kedamaian, dan kelancaran di setiap perjalanan."
+              "Selamat ulang tahun yaa sayangku Zaid. Tetap jadi orang yang baik, hangat, dan selalu sayang sama aku. Semoga semua hal-hal baik selalu datang ke hidup kamu."
             </p>
 
             {/* Sign Off */}
             <div className="reveal-el" style={{ marginBottom: 10 }}>
               <p style={{ fontSize: '0.72rem', color: '#4a6b34', marginBottom: 4, textTransform: 'uppercase', letterSpacing: 1.2, fontWeight: 700 }}>
-                With Warmest Regards & Best Wishes — Za 🍵✨
+                Dari yang paling manja dan sayang kamu — Za
               </p>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: '#1e40af' }}>
-                Happy 21st Birthday, James 🍵✨
+              <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', color: '#1e40af' }}>
+                Happy Birthday, My Favorite Person!
               </p>
             </div>
 
@@ -171,18 +171,18 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
             fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
             display: 'flex', alignItems: 'center', gap: 6,
           }}>
-            <Download size={14} /> Simpan atau screenshot kartu ucapan ini sebagai kenangan 📸
+            <Download size={14} /> Disimpan yaa kartunya, jangan lupa difavoritkan
           </p>
 
           <button className="btn-primary" onClick={onNext} style={{ width: '100%', padding: '15px 20px', fontSize: '0.92rem', marginBottom: 6 }}>
-            Lihat Buket Bunga 💐 <ArrowRight size={16} />
+            Ambil Bunga Dari Aku <ArrowRight size={16} />
           </button>
 
           <button className="btn-ghost" onClick={onRestart} style={{ 
             padding: '10px 20px', background: 'rgba(255,255,255,0.7)',
             borderRadius: 20, color: 'var(--berry)'
           }}>
-            <RotateCcw size={14} /> Ulangi Dari Awal 🔄
+            <RotateCcw size={14} /> Lihat Dari Awal Lagi
           </button>
         </div>
       </div>

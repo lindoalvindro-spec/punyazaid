@@ -10,7 +10,7 @@ import MemoryGallery from './components/MemoryGallery';
 import BirthdayWishCard from './components/BirthdayWishCard';
 import SpotifyPlayer from './components/SpotifyPlayer';
 
-const MATCHA_BLUE_EMOJIS = ['🍵', '🌿', '🍃', '💙', '✨', '🍵', '🌱', '🧋', '☘️'];
+const MATCHA_BLUE_EMOJIS = ['✨', '💙', '🍃', '✨'];
 
 function FloatingHearts() {
   const hearts = Array.from({ length: 14 }, (_, i) => ({
@@ -80,7 +80,7 @@ export default function App() {
       {/* Background Layer (visible on non-splash stages) */}
       {stage !== 'splash' && (
         <div className="bg-layer">
-          <img src="/background.jpg" alt="" className="bg-layer__image" />
+          <img src="/background bunga.jpg" alt="" className="bg-layer__image" onError={(e) => { e.target.src = '/background%20bunga.jpg'; }} />
           <div className="bg-gradient" />
         </div>
       )}

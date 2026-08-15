@@ -5,7 +5,7 @@ import gsap from 'gsap';
 export default function PinScreen({ onUnlock }) {
   const [pin, setPin] = useState('');
   const [error, setError] = useState(false);
-  const correctPin = '111111';
+  const correctPin = '1302';
   const cardRef = useRef(null);
   const dotsRef = useRef([]);
   const lockRef = useRef(null);
@@ -24,7 +24,7 @@ export default function PinScreen({ onUnlock }) {
   }, []);
 
   const press = (num) => {
-    if (pin.length >= 6) return;
+    if (pin.length >= 4) return;
     const next = pin + num;
     setPin(next);
     setError(false);
@@ -33,7 +33,7 @@ export default function PinScreen({ onUnlock }) {
     const dot = dotsRef.current[next.length - 1];
     if (dot) gsap.fromTo(dot, { scale: 0.5 }, { scale: 1, duration: 0.25, ease: 'back.out(3)' });
 
-    if (next.length === 6) {
+    if (next.length === 4) {
       setTimeout(() => verify(next), 200);
     }
   };
@@ -81,25 +81,25 @@ export default function PinScreen({ onUnlock }) {
 
         {/* Title */}
         <h1 style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.75rem', color: 'var(--berry)',
+          fontFamily: 'var(--font-display)', fontSize: '1.9rem', color: 'var(--berry)',
           textAlign: 'center', lineHeight: 1.2, marginBottom: 4,
         }}>
-          Akses Galeri Spesial 🍵✨
+          Pintu Rahasia Buat Zaid
         </h1>
         <p style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: '#2563eb',
+          fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: '#2563eb',
           textAlign: 'center', fontWeight: 600, marginBottom: 22, opacity: 0.9,
         }}>
-          Masukkan kode sandi akses 🍵
+          Masukin PIN rahasianya dulu yaa
         </p>
 
         {/* PIN Dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 10, marginBottom: 22 }}>
-          {[0, 1, 2, 3, 4, 5].map((i) => {
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 12, marginBottom: 22 }}>
+          {[0, 1, 2, 3].map((i) => {
             const filled = pin.length > i;
             return (
               <div key={i} ref={(el) => (dotsRef.current[i] = el)} style={{
-                width: 38, height: 38, borderRadius: 12,
+                width: 44, height: 44, borderRadius: 14,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 background: filled
                   ? 'linear-gradient(135deg, #7a9a60, #3b82f6)'
@@ -108,7 +108,7 @@ export default function PinScreen({ onUnlock }) {
                 boxShadow: filled ? '0 4px 16px rgba(59, 130, 246, 0.3)' : 'none',
                 transition: 'all 0.2s ease',
               }}>
-                {filled && <span style={{ fontSize: '0.9rem' }}>🍃</span>}
+                {filled && <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 700 }}>•</span>}
               </div>
             );
           })}
@@ -117,12 +117,12 @@ export default function PinScreen({ onUnlock }) {
         {/* Error */}
         {error && (
           <div style={{
-            background: 'rgba(212,69,108,0.12)', color: 'var(--pink-deep)',
-            padding: '8px 14px', borderRadius: 14, fontSize: '0.78rem', fontWeight: 600,
+            background: 'rgba(212,69,108,0.12)', color: '#dc2626',
+            padding: '8px 14px', borderRadius: 14, fontSize: '0.8rem', fontWeight: 600,
             marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
             border: '1px solid rgba(212,69,108,0.25)',
           }}>
-            <AlertCircle size={14} /> Kode akses tidak sesuai. Silakan coba lagi.
+            <AlertCircle size={14} /> Kodenya salah tuh, masa lupa sih? Coba lagi yaa
           </div>
         )}
 

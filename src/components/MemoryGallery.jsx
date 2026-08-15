@@ -9,13 +9,17 @@ export default function MemoryGallery({ onNext }) {
   const containerRef = useRef(null);
 
   const exhibits = [
-    { src: '/james 1.jfif', tag: 'EXHIBIT #01', title: 'Handsome Radiance 🌟' },
-    { src: '/james 2.jfif', tag: 'EXHIBIT #02', title: 'Sweet Smile ✨' },
-    { src: '/james 3.jfif', tag: 'EXHIBIT #03', title: 'Cool & Joyful 🌸' },
-    { src: '/james 4.jfif', tag: 'EXHIBIT #04', title: 'Warm Atmosphere ☀️' },
-    { src: '/james 5.jfif', tag: 'EXHIBIT #05', title: 'Precious Moments 💎' },
-    { src: '/james 6.jfif', tag: 'EXHIBIT #06', title: 'Sweet Memories 💖' },
-    { src: '/james 7.jfif', tag: 'EXHIBIT #07', title: 'Favorite View 🌺' },
+    { src: '/zaid 1.jpeg', tag: 'FOTO #01', title: 'Senyum Favorit Aku' },
+    { src: '/zaid 2.jpeg', tag: 'FOTO #02', title: 'Ganteng Banget Pas Lagi Santai' },
+    { src: '/zaid 3.jpeg', tag: 'FOTO #03', title: 'Momen Paling Gemas' },
+    { src: '/zaid 4.jpeg', tag: 'FOTO #04', title: 'Tatapan Manisnya Zaid' },
+    { src: '/zaid 5.jpeg', tag: 'FOTO #05', title: 'Foto Kesayangan Aku' },
+    { src: '/zaid 6.jpeg', tag: 'FOTO #06', title: 'Pose Andalan' },
+    { src: '/zaid 7.jpeg', tag: 'FOTO #07', title: 'Lucunya Kamu' },
+    { src: '/zaid 8.jpeg', tag: 'FOTO #08', title: 'Tampan Maksimal' },
+    { src: '/zaid 9.jpeg', tag: 'FOTO #09', title: 'Candid Terbaik' },
+    { src: '/zaid 10.jpeg', tag: 'FOTO #10', title: 'Bikin Salting Terus' },
+    { src: '/zaid 11.jpeg', tag: 'FOTO #11', title: 'Tetap Jadi Juara di Hatiku' },
   ];
 
   useEffect(() => {
@@ -109,14 +113,14 @@ export default function MemoryGallery({ onNext }) {
         }}>
           <Sparkles size={13} color="#4a6b34" />
           <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#4a6b34', letterSpacing: 1.5, textTransform: 'uppercase' }}>
-            Galeri Foto & Kenangan 🍵
+            Koleksi Kenangan
           </span>
         </div>
         <h1 style={{
           fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: '#1e40af',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
-          Galeri Foto James 🍵✨
+          Galeri Foto Zaid
         </h1>
       </div>
 
@@ -162,7 +166,7 @@ export default function MemoryGallery({ onNext }) {
               width: '100%', height: '100%', objectFit: 'cover',
               transformOrigin: 'center center'
             }}
-            onError={(e) => { e.target.src = '/james 1.jfif'; }}
+            onError={(e) => { e.target.src = '/zaid 1.jpeg'; }}
           />
 
           {/* Lightbox Inspect Trigger */}
@@ -267,7 +271,7 @@ export default function MemoryGallery({ onNext }) {
 
       {/* Next Button */}
       <button className="gallery-controls btn-primary" onClick={onNext} style={{ width: '100%', maxWidth: 370 }}>
-        Lanjutkan ke Kartu Ucapan 🎴 <ArrowRight size={16} />
+        Buka Kartu Ucapannya <ArrowRight size={16} />
       </button>
     </div>
   );

@@ -79,22 +79,22 @@ export default function PuzzleScreen({ onComplete }) {
           <div style={{ 
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '4px 14px', borderRadius: 20, background: 'rgba(122,154,96,0.15)',
-            color: '#4a6b34', fontSize: '0.7rem', fontWeight: 700, letterSpacing: 1,
+            color: '#4a6b34', fontSize: '0.72rem', fontWeight: 700, letterSpacing: 1,
             textTransform: 'uppercase', marginBottom: 10
           }}>
-            <Puzzle size={12} /> Galeri Kenangan 🍵
+            <Puzzle size={12} /> Tebak Foto
           </div>
           <h2 style={{
-            fontFamily: 'var(--font-display)', fontSize: '2rem', color: 'var(--berry)', 
+            fontFamily: 'var(--font-display)', fontSize: '2.1rem', color: 'var(--berry)', 
             marginBottom: 6, lineHeight: 1.1
           }}>
-            Puzzle Kenangan
+            Susun Fotonya Dulu
           </h2>
           <p style={{ 
-            fontFamily: 'var(--font-cute)', fontSize: '0.85rem', color: '#2563eb', 
+            fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: '#2563eb', 
             fontWeight: 600, opacity: 0.9
           }}>
-            Susun potongan kenangan untuk membuka galeri utama 🌿
+            Biar bisa lanjut, rapihin foto ganteng kamu ini dulu yaa
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export default function PuzzleScreen({ onComplete }) {
                   <div style={{
                     width: '300%', height: '300%', position: 'absolute', 
                     top: `${-srcRow * 100}%`, left: `${-srcCol * 100}%`,
-                    backgroundImage: 'url(/james%203.jfif)', backgroundSize: 'cover',
+                    backgroundImage: 'url(/zaid%201.jpeg)', backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }} />
                 )}
@@ -185,7 +185,7 @@ export default function PuzzleScreen({ onComplete }) {
                 width: '85%', aspectRatio: '1', borderRadius: 16, overflow: 'hidden',
                 boxShadow: '0 12px 32px rgba(212,69,108,0.25)', marginBottom: 16
               }}>
-                <img src="/james 3.jfif" alt="Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/zaid 1.jpeg" alt="Preview" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <span style={{ 
                 color: 'var(--pink-deep)', fontSize: '0.75rem', fontWeight: 700,
@@ -203,10 +203,10 @@ export default function PuzzleScreen({ onComplete }) {
               color: 'var(--pink-deep)', fontWeight: 800, fontSize: '1rem', fontFamily: 'var(--font-display)',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, marginBottom: 16,
             }}>
-              <CheckCircle2 size={18} /> KENANGAN BERHASIL TERSUSUN ✨
+              <CheckCircle2 size={18} /> Yeyy berhasil! Ganteng banget sih
             </div>
             <button className="btn-primary" onClick={onComplete} style={{ width: '100%' }}>
-              Buka Surat Ucapan <ArrowRight size={16} />
+              Buka Surat Buat Kamu <ArrowRight size={16} />
             </button>
           </div>
         ) : (
@@ -214,7 +214,7 @@ export default function PuzzleScreen({ onComplete }) {
             width: '100%', background: 'rgba(212,69,108,0.04)', borderRadius: 16, 
             padding: '12px', fontSize: '0.85rem'
           }}>
-            Lanjutkan Langsung
+            Lewati Puzzle
           </button>
         )}
       </div>

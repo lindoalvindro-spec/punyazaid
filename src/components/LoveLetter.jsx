@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Heart, ArrowRight, Sparkles, Quote } from 'lucide-react';
 import gsap from 'gsap';
 
-// ─── 💌 Tab 1: Surat Content (High-End Romantic Birthday Letter) ───
+// ─── 💌 Tab 1: Surat Content (Sweet & Manja Birthday Letter) ───
 function LetterTab() {
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
@@ -43,8 +43,8 @@ function LetterTab() {
           width: 36, height: 12, background: 'rgba(122,154,96,0.4)',
           borderRadius: 2, backdropFilter: 'blur(4px)', zIndex: 10
         }} />
-        <img src="/james 5.jfif" alt="James" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          onError={(e) => { e.target.src = '/james 5.jfif'; }} />
+        <img src="/zaid 5.jpeg" alt="Zaid" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          onError={(e) => { e.target.src = '/zaid 5.jpeg'; }} />
       </div>
 
       {/* Opening Badge Header */}
@@ -57,30 +57,30 @@ function LetterTab() {
         }}>
           <Sparkles size={13} color="#2563eb" />
           <span style={{ fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 700, color: '#1e40af', letterSpacing: '0.5px' }}>
-            HAPPY 21ST BIRTHDAY, JAMES 🍵✨
+            HAPPY BIRTHDAY, ZAID
           </span>
         </div>
 
-        {/* Romantic Cursive Salutation */}
+        {/* Cursive Salutation */}
         <h3 style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.65rem', color: '#1e40af',
+          fontFamily: 'var(--font-display)', fontSize: '1.7rem', color: '#1e40af',
           lineHeight: 1.2, margin: '4px 0 10px 0'
         }}>
-          Dearest James,
+          Halo Zaid kesayangan aku,
         </h3>
       </div>
 
       {/* Paragraph 1 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500, letterSpacing: '0.2px' }}>
-        Selamat ulang tahun yang ke-21, James. Semoga setiap langkahmu senantiasa dipenuhi keberkahan, kesehatan, dan kelancaran dalam meraih setiap impian baikmu.
+        Selamat ulang tahun yaa sayang! Hari ini hari spesial kamu, dan aku mau bilang kalau aku bersyukur banget bisa punya kamu di hidup aku. Makasih ya udah selalu sabar, selalu ada buat aku, dan bikin hari-hari aku jauh lebih hangat dan seru.
       </p>
 
       {/* Paragraph 2 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 16, fontWeight: 500 }}>
-        Terima kasih telah menjadi pribadi yang hangat dan luar biasa. Bersyukur bisa mengenalmu dan menjadi bagian dari perjalanan yang berharga ini.
+        Walaupun aku kadang suka manja atau ngambek ga jelas, kamu tetep sabar ngadepin aku. Jangan pernah bosen ya sama manjanya aku, tetep jadi Zaid yang selalu bikin aku nyaman dan jatuh cinta tiap hari.
       </p>
 
-      {/* 🌟 Romantic Quote Highlight Box */}
+      {/* Romantic Quote Highlight Box */}
       <div ref={(el) => itemsRef.current.push(el)} style={{
         margin: '18px 0',
         padding: '16px 18px',
@@ -101,14 +101,14 @@ function LetterTab() {
             lineHeight: 1.75,
             fontWeight: 600,
           }}>
-            "Setiap momen dan kenangan yang tercipta bersamamu selalu menjadi bagian berharga dalam perjalanan ini. Terima kasih telah hadir dan memberi banyak arti."
+            "Kamu itu tempat paling nyaman buat aku cerita apa aja. Semoga hari ini dan seterusnya, kamu selalu bahagia sama aku."
           </p>
         </div>
       </div>
 
       {/* Paragraph 3 */}
       <p ref={(el) => itemsRef.current.push(el)} style={{ marginBottom: 14, fontWeight: 500 }}>
-        Selamat bertambah usia. Semoga di usiamu yang baru ini, kamu senantiasa dikelilingi oleh kebahagiaan, kedamaian, dan orang-orang yang tulus menyayangimu.
+        Semoga semua impian dan apa yang lagi kamu perjuangin bisa tercapai satu per satu. Apapun yang terjadi, aku bakal selalu ada di samping kamu buat semangatin kamu terus.
       </p>
 
       {/* Handwritten Sign-Off Card */}
@@ -120,10 +120,10 @@ function LetterTab() {
         clear: 'both',
       }}>
         <p style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: '#1e40af',
+          fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: '#1e40af',
           lineHeight: 1.35, margin: 0, fontWeight: 700
         }}>
-          Selamat Ulang Tahun yang ke-21, James 🍵✨
+          Selamat ulang tahun, kesayangan aku! Love you so much!
         </p>
       </div>
     </div>
@@ -151,30 +151,30 @@ function ImpianTab() {
   const dreams = [
     {
       icon: '✈️',
-      badge: 'DREAM 01',
-      title: 'Closing The Distance',
-      text: 'Bisa segera ketemu, ngobrol langsung tanpa terhalang layar HP, dan jalan-jalan bareng menghabiskan waktu tanpa perlu buru-buru bilang pamit.',
+      badge: 'HARAPAN 01',
+      title: 'Sering Jalan & Ketemu',
+      text: 'Bisa lebih sering ketemu, jalan berdua, jajan enak bareng, dan ngobrol lama tanpa perlu buru-buru pamit.',
       gradient: 'linear-gradient(135deg, rgba(96,165,250,0.2), rgba(163,201,133,0.3))',
     },
     {
       icon: '🌟',
-      badge: 'DREAM 02',
-      title: 'Endless Support From Afar',
-      text: 'Meskipun jauh, aku bakal selalu ada buat dengerin cerita kamu, dukung setiap langkah, impian, dan karir James. You will never walk alone.',
+      badge: 'HARAPAN 02',
+      title: 'Selalu Ada Buat Kamu',
+      text: 'Aku mau selalu jadi orang pertama yang dengerin cerita, keluh kesah, dan pencapaian hebat kamu setiap hari.',
       gradient: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(220,252,231,0.4))',
     },
     {
       icon: '📸',
-      badge: 'DREAM 03',
-      title: 'Creating Real Memories',
-      text: 'Bikin momen-momen manis baru di dunia nyata, foto bareng tanpa dipisah sinyal, dan merayakan ultah selanjutnya berdampingan.',
+      badge: 'HARAPAN 03',
+      title: 'Bikin Momen Lucu Bareng',
+      text: 'Bikin foto-foto random baru, ketawa bareng hal-hal sepele, dan lewatin hari-hari seru bareng kamu.',
       gradient: 'linear-gradient(135deg, rgba(122,154,96,0.2), rgba(224,242,254,0.4))',
     },
     {
       icon: '💍',
-      badge: 'DREAM 04',
-      title: 'Building Our Forever',
-      text: 'Merawat komitmen, kehangatan, dan rasa percaya ini dengan kuat sampai waktu membawa kita pada masa depan yang indah bersama.',
+      badge: 'HARAPAN 04',
+      title: 'Tetap Bareng Terus',
+      text: 'Mau terus sama kamu, saling jaga, saling ngerti, dan saling sayang sampai nanti-nanti.',
       gradient: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(163,201,133,0.35))',
     },
   ];
@@ -189,9 +189,9 @@ function ImpianTab() {
       <div style={{ textAlign: 'center', marginBottom: 4 }}>
         <Sparkles size={20} color="#4a6b34" style={{ marginBottom: 4 }} />
         <h4 style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: '#1e40af',
+          fontFamily: 'var(--font-display)', fontSize: '1.45rem', color: '#1e40af',
           lineHeight: 1.2
-        }}>Harapan & Masa Depan 🌿</h4>
+        }}>Harapan Kecil Kita</h4>
       </div>
 
       {dreams.map((item, i) => (
@@ -218,7 +218,7 @@ function ImpianTab() {
               width: 44, height: 44, flexShrink: 0, borderRadius: 14,
               background: item.gradient,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              border: '1px solid rgba(122,154,96,0.3)', fontSize: '1.3rem',
+              border: '1px solid rgba(122,154,96,0.3)', fontSize: '1.2rem',
               boxShadow: '0 4px 12px rgba(15,23,42,0.08)'
             }}>
               {item.icon}
@@ -275,18 +275,18 @@ function WishesTab() {
       <div style={{ textAlign: 'center', marginBottom: 20 }}>
         <Sparkles size={20} color="#3b82f6" style={{ marginBottom: 6 }} />
         <h4 style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: '#1e40af',
+          fontFamily: 'var(--font-display)', fontSize: '1.45rem', color: '#1e40af',
           lineHeight: 1.2
-        }}>Birthday Wishes & Prayers ✨</h4>
+        }}>Doa Tulus Buat Kamu</h4>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         {[
-          <span>Semoga di usiamu yang ke-21 ini, James selalu diberikan kesehatan, kelancaran rezeki, dan perlindungan di mana pun kamu berada. 🤲🏻💖</span>,
-          <span>May your days be filled with endless joy and peace, and may the distance never fade that sweet, beautiful smile of yours! ✨</span>,
-          <span>Semoga rasa rindu di antara kita selalu jadi penguat ikatan cinta dan kedewasaan hubungan kita setiap harinya. 🌸</span>,
-          <span>May all your dreams, ambitions, and wishes at 21 come true beautifully, one by one. 🥂</span>,
-          <span>Terima kasih udah bertahan dan selalu memperjuangkan hubungan LDR ini bareng aku. Happy 21st Birthday, my love! 🎂🎁💝</span>
+          <span>Semoga Zaid selalu sehat, lancar semua urusannya, dan dijauhin dari hal-hal yang bikin pusing.</span>,
+          <span>Semoga harimu selalu dipenuhi hal-hal baik dan senyum manismu ga pernah hilang.</span>,
+          <span>Semoga rezekinya makin lancar dan berkah biar bisa ajak aku jajan terus yaa.</span>,
+          <span>Semoga semua rencana dan cita-cita kamu dipermudah jalannya satu per satu.</span>,
+          <span>Makasih ya udah lahir ke dunia dan jadi pasangan terbaik buat aku. Happy birthday!</span>
         ].map((item, i) => (
           <div key={i} ref={(el) => itemsRef.current.push(el)} style={{
             display: 'flex', gap: 12, alignItems: 'flex-start',
@@ -301,7 +301,7 @@ function WishesTab() {
               fontSize: '0.75rem', fontWeight: 700, fontFamily: 'var(--font-display)',
               marginTop: 2
             }}>{i + 1}</div>
-            <p style={{ fontSize: '0.8rem', color: 'var(--berry)', lineHeight: 1.5, flex: 1 }}>
+            <p style={{ fontSize: '0.82rem', color: 'var(--berry)', lineHeight: 1.55, flex: 1 }}>
               {item}
             </p>
           </div>
@@ -345,9 +345,9 @@ export default function LoveLetter({ onNext }) {
   };
 
   const tabs = [
-    { id: 'letter', label: '💌 Surat' },
-    { id: 'reasons', label: '🌿 Harapan' },
-    { id: 'wishes', label: '✨ Doa' },
+    { id: 'letter', label: 'Surat' },
+    { id: 'reasons', label: 'Harapan' },
+    { id: 'wishes', label: 'Doa' },
   ];
 
   return (
@@ -366,8 +366,8 @@ export default function LoveLetter({ onNext }) {
             position: 'absolute', top: 14, right: 14, width: 38, height: 44,
             border: '2px dashed #7a9a60', borderRadius: 6,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '1.2rem', opacity: 0.85,
-          }}>🍵</div>
+            fontSize: '1.1rem', opacity: 0.85,
+          }}>💌</div>
 
           {/* Wax Seal */}
           <div ref={sealRef} className="anim-breathe" style={{
@@ -381,19 +381,19 @@ export default function LoveLetter({ onNext }) {
           </div>
 
           <h2 style={{
-            fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: 'var(--berry)', marginBottom: 6,
-          }}>Surat Ulang Tahun</h2>
+            fontFamily: 'var(--font-display)', fontSize: '1.9rem', color: 'var(--berry)', marginBottom: 6,
+          }}>Surat Buat Zaid</h2>
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: '#2563eb', fontWeight: 600,
-          }}>Untuk James 🍵✨</p>
+          }}>Ada pesan kecil yang mau aku sampein</p>
 
           <div style={{
-            marginTop: 24, fontSize: '0.75rem', fontWeight: 700,
+            marginTop: 24, fontSize: '0.76rem', fontWeight: 700,
             background: 'rgba(122,154,96,0.15)', color: '#4a6b34',
             padding: '8px 18px', borderRadius: 20, display: 'inline-block',
             border: '1.5px solid rgba(122,154,96,0.3)',
           }}>
-            Ketuk untuk membuka surat
+            Ketuk buat buka suratnya
           </div>
         </div>
       )}
@@ -409,12 +409,12 @@ export default function LoveLetter({ onNext }) {
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: 18 }}>
             <h1 style={{
-              fontFamily: 'var(--font-display)', fontSize: '1.85rem', color: '#1e40af',
+              fontFamily: 'var(--font-display)', fontSize: '1.9rem', color: '#1e40af',
               lineHeight: 1.15, marginBottom: 4,
-            }}>Happy Birthday, James! 🎂✨</h1>
+            }}>Happy Birthday, Zaid!</h1>
             <p style={{
-              fontFamily: 'var(--font-cute)', fontSize: '0.78rem', color: '#4a6b34', fontWeight: 600,
-            }}>Pesan hangat dan doa terbaik di usiamu yang ke-21 🌿</p>
+              fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: '#4a6b34', fontWeight: 600,
+            }}>Pesan hangat dan doa terbaik buat kamu</p>
           </div>
 
           {/* Navigation */}
@@ -427,7 +427,7 @@ export default function LoveLetter({ onNext }) {
                 flex: 1, padding: '9px 4px', borderRadius: 11, border: 'none',
                 background: tab === t.id ? 'linear-gradient(135deg, #7a9a60, #3b82f6)' : 'transparent',
                 color: tab === t.id ? '#fff' : '#334155',
-                fontFamily: 'var(--font-cute)', fontSize: '0.74rem', fontWeight: 700,
+                fontFamily: 'var(--font-cute)', fontSize: '0.78rem', fontWeight: 700,
                 cursor: 'pointer', transition: 'all 0.2s ease',
               }}>{t.label}</button>
             ))}
@@ -439,7 +439,7 @@ export default function LoveLetter({ onNext }) {
 
           {/* CTA Button */}
           <button className="btn-primary" onClick={onNext} style={{ width: '100%', marginTop: 20 }}>
-            Lanjutkan ke Momen Lilin 🕯️ <ArrowRight size={16} />
+            Tiup Lilin Bareng Yuk <ArrowRight size={16} />
           </button>
         </div>
       )}
