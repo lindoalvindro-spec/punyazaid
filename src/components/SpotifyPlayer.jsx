@@ -154,13 +154,13 @@ export default function SpotifyPlayer({ autoPlay = false }) {
           ref={pillRef}
           onClick={() => setExpanded(true)}
           style={{
-            background: 'rgba(18, 18, 18, 0.92)',
+            background: 'rgba(18, 14, 18, 0.92)',
             backdropFilter: 'blur(16px)',
             WebkitBackdropFilter: 'blur(16px)',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
+            border: '1px solid rgba(220, 38, 38, 0.35)',
             borderRadius: 50,
             padding: '6px 14px 6px 8px',
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(29, 185, 84, 0.2)',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(220, 38, 38, 0.35)',
             display: 'flex',
             alignItems: 'center',
             gap: 10,
@@ -176,7 +176,7 @@ export default function SpotifyPlayer({ autoPlay = false }) {
           <div style={{
             width: 34, height: 34, borderRadius: '50%', overflow: 'hidden', flexShrink: 0,
             position: 'relative', background: '#282828',
-            border: '1.5px solid #1DB954',
+            border: '1.5px solid #ef4444',
           }}>
             <img
               src="/foto-lagu.jpg"
@@ -189,7 +189,7 @@ export default function SpotifyPlayer({ autoPlay = false }) {
                 position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.3)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center'
               }}>
-                <Disc size={16} color="#1DB954" />
+                <Disc size={16} color="#ef4444" />
               </div>
             )}
           </div>
@@ -203,7 +203,7 @@ export default function SpotifyPlayer({ autoPlay = false }) {
               Nanti Kita Seperti Ini
             </div>
             <div style={{
-              fontSize: '0.66rem', color: '#1DB954', fontWeight: 600,
+              fontSize: '0.66rem', color: '#f87171', fontWeight: 600,
               display: 'flex', alignItems: 'center', gap: 3, marginTop: 1
             }}>
               {playing ? '🎵 Playing' : '▶ Tap for Player'}
@@ -236,13 +236,13 @@ export default function SpotifyPlayer({ autoPlay = false }) {
         <div
           ref={widgetRef}
           style={{
-            background: 'rgba(18, 18, 18, 0.96)',
+            background: 'rgba(18, 14, 18, 0.96)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
+            border: '1px solid rgba(220, 38, 38, 0.35)',
             borderRadius: 24,
             padding: '12px 14px',
-            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(29, 185, 84, 0.25)',
+            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(220, 38, 38, 0.3)',
             display: 'flex',
             alignItems: 'center',
             gap: 12,
@@ -281,10 +281,10 @@ export default function SpotifyPlayer({ autoPlay = false }) {
             {playing && (
               <div style={{
                 position: 'absolute', bottom: 4, right: 4, width: 18, height: 18,
-                borderRadius: '50%', background: '#1DB954', display: 'flex',
+                borderRadius: '50%', background: '#ef4444', display: 'flex',
                 alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 6px rgba(0,0,0,0.4)'
               }}>
-                <Disc size={11} color="#000" className="anim-spin" />
+                <Disc size={11} color="#fff" className="anim-spin" />
               </div>
             )}
           </div>
@@ -303,7 +303,7 @@ export default function SpotifyPlayer({ autoPlay = false }) {
                   Nanti Kita Seperti Ini
                 </div>
                 <div style={{
-                  fontSize: '0.74rem', color: '#b3b3b3', fontWeight: 500,
+                  fontSize: '0.74rem', color: '#f87171', fontWeight: 500,
                   whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: 1
                 }}>
                   Batas Senja
@@ -313,12 +313,12 @@ export default function SpotifyPlayer({ autoPlay = false }) {
               <button
                 onClick={() => setLiked(!liked)}
                 style={{
-                  background: 'none', border: 'none', color: liked ? '#1DB954' : '#b3b3b3',
+                  background: 'none', border: 'none', color: liked ? '#ef4444' : '#b3b3b3',
                   cursor: 'pointer', padding: 2, display: 'flex', alignItems: 'center',
                   flexShrink: 0
                 }}
               >
-                {liked ? <Heart size={18} fill="#1DB954" /> : <Plus size={18} />}
+                {liked ? <Heart size={18} fill="#ef4444" color="#ef4444" /> : <Plus size={18} />}
               </button>
             </div>
 
@@ -327,13 +327,13 @@ export default function SpotifyPlayer({ autoPlay = false }) {
               <div
                 onClick={handleSeek}
                 style={{
-                  height: 4, background: '#4d4d4d', borderRadius: 4,
+                  height: 4, background: 'rgba(255,255,255,0.15)', borderRadius: 4,
                   cursor: 'pointer', position: 'relative', overflow: 'hidden'
                 }}
               >
                 <div style={{
                   width: `${progress}%`, height: '100%', borderRadius: 4,
-                  background: '#ffffff', transition: 'width 0.1s linear'
+                  background: 'linear-gradient(90deg, #ef4444, #dc2626)', transition: 'width 0.1s linear'
                 }} />
               </div>
 
@@ -353,7 +353,7 @@ export default function SpotifyPlayer({ autoPlay = false }) {
             }}>
               <button
                 onClick={() => setMuted(!muted)}
-                style={{ background: 'none', border: 'none', color: muted ? '#1DB954' : '#b3b3b3', cursor: 'pointer', padding: 2 }}
+                style={{ background: 'none', border: 'none', color: muted ? '#ef4444' : '#b3b3b3', cursor: 'pointer', padding: 2 }}
               >
                 {muted ? <VolumeX size={15} /> : <Sparkles size={15} />}
               </button>
@@ -369,12 +369,12 @@ export default function SpotifyPlayer({ autoPlay = false }) {
                 onClick={togglePlay}
                 style={{
                   width: 36, height: 36, borderRadius: '50%', border: 'none',
-                  background: '#ffffff', color: '#000000',
+                  background: 'linear-gradient(135deg, #ef4444, #dc2626)', color: '#ffffff',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                  cursor: 'pointer', boxShadow: '0 4px 12px rgba(220,38,38,0.4)',
                 }}
               >
-                {playing ? <Pause size={17} fill="#000000" /> : <Play size={17} fill="#000000" style={{ marginLeft: 2 }} />}
+                {playing ? <Pause size={17} fill="#ffffff" /> : <Play size={17} fill="#ffffff" style={{ marginLeft: 2 }} />}
               </button>
 
               <button
@@ -386,7 +386,7 @@ export default function SpotifyPlayer({ autoPlay = false }) {
 
               <button
                 onClick={() => setMuted(!muted)}
-                style={{ background: 'none', border: 'none', color: muted ? '#e85d88' : '#b3b3b3', cursor: 'pointer', padding: 2 }}
+                style={{ background: 'none', border: 'none', color: muted ? '#ef4444' : '#b3b3b3', cursor: 'pointer', padding: 2 }}
               >
                 {muted ? <VolumeX size={15} /> : <Volume2 size={15} />}
               </button>

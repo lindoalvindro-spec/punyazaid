@@ -53,40 +53,42 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
       }}>
         {/* Main Card Frame */}
         <div ref={frameRef} style={{
-          background: 'linear-gradient(135deg, #ffffff 0%, #fffbf8 100%)',
+          background: 'linear-gradient(135deg, #1f161b 0%, #121014 100%)',
           borderRadius: 28, padding: '14px',
-          border: '1.5px solid var(--glass-border)',
+          border: '1.5px solid rgba(220, 38, 38, 0.35)',
           position: 'relative', marginBottom: 24,
-          boxShadow: '0 16px 48px rgba(45,16,30,0.12)'
+          boxShadow: '0 16px 48px rgba(0,0,0,0.7)'
         }}>
           {/* Inner Invitation Border */}
           <div style={{
-            border: '1px solid rgba(122,154,96,0.3)', borderRadius: 20,
+            borderRadius: 20,
             padding: '36px 22px', textAlign: 'center', position: 'relative', overflow: 'hidden',
-            background: 'radial-gradient(circle at top, #ffffff 0%, #f0f9ff 50%, #ecf8e5 100%)'
+            background: 'radial-gradient(circle at top, #23161c 0%, #161218 50%, #0d0a10 100%)',
+            border: '1.5px solid rgba(220, 38, 38, 0.35)',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.7)'
           }}>
 
             {/* Cute Cat Decor Sticker (Top Left Corner) */}
             <img src="/lucu1 no bg.png" alt="Cute Decor" className="float-el reveal-el" style={{
               position: 'absolute', top: 10, left: 10, width: 75,
               opacity: 0.95, pointerEvents: 'none', zIndex: 10,
-              filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))'
+              filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.6))'
             }} onError={(e) => e.target.style.display = 'none'} />
 
             {/* Pink Hearts Cluster (Top Right Corner) */}
             <img src="/gambar 13 no bg 1.png" alt="Hearts" className="reveal-el" style={{
               position: 'absolute', top: 10, right: 10, width: 75,
               opacity: 0.9, pointerEvents: 'none', zIndex: 10,
-              filter: 'drop-shadow(0 4px 8px rgba(59,130,246,0.2))'
+              filter: 'drop-shadow(0 4px 8px rgba(220,38,38,0.3))'
             }} onError={(e) => e.target.style.display = 'none'} />
 
             {/* Top Crown & Sparkles Decoration */}
             <div className="reveal-el" style={{ marginBottom: 14, display: 'flex', justifyContent: 'center' }}>
               <div style={{
-                width: 44, height: 44, borderRadius: '50%', background: 'rgba(122,154,96,0.15)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(122,154,96,0.3)'
+                width: 44, height: 44, borderRadius: '50%', background: 'rgba(220, 38, 38, 0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(239, 68, 68, 0.4)'
               }}>
-                <Crown size={22} color="#4a6b34" />
+                <Crown size={22} color="#f59e0b" />
               </div>
             </div>
 
@@ -97,20 +99,20 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
               {/* Left Butterflies Cluster */}
               <img src="/gambar 12 no bg.png" alt="Left Butterflies" className="float-el" style={{
                 position: 'absolute', top: 25, left: -35, width: 60,
-                zIndex: 5, pointerEvents: 'none', filter: 'drop-shadow(0 4px 10px rgba(59,130,246,0.3))'
+                zIndex: 5, pointerEvents: 'none', filter: 'drop-shadow(0 4px 10px rgba(220,38,38,0.4))'
               }} onError={(e) => e.target.style.display = 'none'} />
 
               {/* Right Butterflies Cluster */}
               <img src="/gambar 12 no bg.png" alt="Right Butterflies" className="float-el" style={{
                 position: 'absolute', top: 80, right: -45, width: 55,
                 zIndex: 5, pointerEvents: 'none', transform: 'scaleX(-1)',
-                filter: 'drop-shadow(0 4px 10px rgba(59,130,246,0.3))'
+                filter: 'drop-shadow(0 4px 10px rgba(220,38,38,0.4))'
               }} onError={(e) => e.target.style.display = 'none'} />
 
               <div style={{
                 width: 150, height: 150, borderRadius: '50%',
-                overflow: 'hidden', border: '4px solid #fff',
-                boxShadow: '0 12px 32px rgba(59,130,246,0.25)',
+                overflow: 'hidden', border: '3px solid rgba(239, 68, 68, 0.7)',
+                boxShadow: '0 12px 32px rgba(220, 38, 38, 0.45)',
                 position: 'relative', zIndex: 1
               }}>
                 <img src="/zaid 10.jpeg" alt="Zaid" style={{
@@ -121,7 +123,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
 
             {/* Typography */}
             <h3 className="reveal-el" style={{
-              fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: '#4a6b34',
+              fontFamily: 'var(--font-cute)', fontSize: '0.8rem', color: '#f87171',
               letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 4, fontWeight: 700
             }}>
               Kartu Spesial
@@ -129,8 +131,8 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
             
             <div className="reveal-el" style={{ textAlign: 'center', marginBottom: 18 }}>
               <h1 style={{
-                fontFamily: 'var(--font-display)', fontSize: '2.6rem', color: '#1e40af',
-                lineHeight: 1, margin: 0
+                fontFamily: 'var(--font-display)', fontSize: '2.6rem', color: '#ef4444',
+                lineHeight: 1, margin: 0, textShadow: '0 2px 14px rgba(220,38,38,0.5)'
               }}>
                 Zaid
               </h1>
@@ -138,12 +140,12 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
 
             {/* Gold Accent Divider */}
             <div className="reveal-el" style={{
-              width: 50, height: 1.5, background: '#7a9a60', margin: '0 auto 20px', opacity: 0.8
+              width: 50, height: 1.5, background: '#ef4444', margin: '0 auto 20px', opacity: 0.8
             }} />
 
             {/* Message */}
             <p className="reveal-el" style={{
-              fontFamily: 'var(--font-body)', fontSize: '0.88rem', color: 'var(--berry-light)',
+              fontFamily: 'var(--font-body)', fontSize: '0.88rem', color: '#f1f5f9',
               lineHeight: 1.75, marginBottom: 24, fontStyle: 'italic', padding: '0 6px'
             }}>
               "Selamat ulang tahun yaa sayangku Zaid. Tetap jadi orang yang baik, hangat, dan selalu sayang sama aku. Semoga semua hal-hal baik selalu datang ke hidup kamu."
@@ -151,10 +153,10 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
 
             {/* Sign Off */}
             <div className="reveal-el" style={{ marginBottom: 10 }}>
-              <p style={{ fontSize: '0.72rem', color: '#4a6b34', marginBottom: 4, textTransform: 'uppercase', letterSpacing: 1.2, fontWeight: 700 }}>
+              <p style={{ fontSize: '0.72rem', color: '#fca5a5', marginBottom: 4, textTransform: 'uppercase', letterSpacing: 1.2, fontWeight: 700 }}>
                 Dari yang paling manja dan sayang kamu — Za
               </p>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', color: '#1e40af' }}>
+              <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', color: '#ffffff' }}>
                 Happy Birthday, My Favorite Person!
               </p>
             </div>
@@ -168,7 +170,7 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
           alignItems: 'center', gap: 12, paddingBottom: 20
         }}>
           <p style={{
-            fontSize: '0.78rem', color: 'var(--rose-gold)', fontWeight: 600,
+            fontSize: '0.78rem', color: '#f87171', fontWeight: 600,
             display: 'flex', alignItems: 'center', gap: 6,
           }}>
             <Download size={14} /> Disimpan yaa kartunya, jangan lupa difavoritkan
@@ -179,8 +181,8 @@ export default function BirthdayWishCard({ onNext, onRestart }) {
           </button>
 
           <button className="btn-ghost" onClick={onRestart} style={{ 
-            padding: '10px 20px', background: 'rgba(255,255,255,0.7)',
-            borderRadius: 20, color: 'var(--berry)'
+            padding: '10px 20px', background: 'rgba(255,255,255,0.08)',
+            borderRadius: 20, color: '#f87171'
           }}>
             <RotateCcw size={14} /> Lihat Dari Awal Lagi
           </button>

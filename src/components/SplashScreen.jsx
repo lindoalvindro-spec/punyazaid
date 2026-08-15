@@ -117,9 +117,9 @@ export default function SplashScreen({ onStart }) {
 
   const sparkleData = [
     { emoji: '✨', top: '10%', left: '8%', size: '1.1rem' },
-    { emoji: '💙', top: '18%', right: '10%', size: '1rem' },
+    { emoji: '❤️', top: '18%', right: '10%', size: '1rem' },
     { emoji: '✨', bottom: '24%', left: '8%', size: '1rem' },
-    { emoji: '💙', bottom: '20%', right: '9%', size: '1rem' },
+    { emoji: '❤️', bottom: '20%', right: '9%', size: '1rem' },
   ];
 
   return (
@@ -143,17 +143,17 @@ export default function SplashScreen({ onStart }) {
       {/* Luxury Dark Gradient Overlay for Maximum Readability */}
       <div ref={overlayRef} style={{
         position: 'absolute', inset: 0, opacity: 0,
-        background: 'radial-gradient(circle at center, rgba(15, 23, 42, 0.65) 0%, rgba(10, 15, 30, 0.9) 70%, rgba(5, 10, 20, 0.98) 100%)',
+        background: 'radial-gradient(circle at center, rgba(30, 8, 15, 0.65) 0%, rgba(15, 6, 10, 0.92) 70%, rgba(8, 8, 12, 0.98) 100%)',
       }} />
 
       {/* Lucu Characters */}
       <img src="/lucu1 no bg.png" alt="Lucu 1" style={{
         position: 'absolute', bottom: '6%', left: '-2%', width: 100, 
-        zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.4))'
+        zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.6))'
       }} onError={(e) => e.target.style.display = 'none'} />
       <img src="/lucu 2 no bg.png" alt="Lucu 2" style={{
         position: 'absolute', bottom: '10%', right: '-2%', width: 95, 
-        zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.4))'
+        zIndex: 2, pointerEvents: 'none', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.6))'
       }} onError={(e) => e.target.style.display = 'none'} />
 
       {/* Floating Sparkles */}
@@ -165,7 +165,7 @@ export default function SplashScreen({ onStart }) {
             position: 'absolute', fontSize: s.size, opacity: 0,
             top: s.top, left: s.left, right: s.right, bottom: s.bottom,
             pointerEvents: 'none', zIndex: 2,
-            filter: 'drop-shadow(0 0 8px rgba(59,130,246,0.6))',
+            filter: 'drop-shadow(0 0 8px rgba(220,38,38,0.7))',
           }}
         >{s.emoji}</span>
       ))}
@@ -187,12 +187,12 @@ export default function SplashScreen({ onStart }) {
         <div ref={badgeRef} style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
           padding: '6px 16px', borderRadius: 30, marginBottom: 12,
-          background: 'rgba(59, 130, 246, 0.25)', backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(163, 201, 133, 0.6)',
-          boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
+          background: 'rgba(220, 38, 38, 0.22)', backdropFilter: 'blur(12px)',
+          border: '1px solid rgba(239, 68, 68, 0.5)',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.5)',
           opacity: 0,
         }}>
-          <Crown size={14} color="var(--gold-accent)" />
+          <Crown size={14} color="#f59e0b" />
           <span className="sparkling-birthday-text">
             Happy Birthday, Sayang!
           </span>
@@ -201,7 +201,7 @@ export default function SplashScreen({ onStart }) {
         {/* Subtitle */}
         <p ref={line1Ref} style={{
           fontFamily: 'var(--font-cute)', fontSize: '0.8rem', fontWeight: 600,
-          color: 'rgba(224,242,254,0.9)', letterSpacing: '1.5px', textTransform: 'uppercase',
+          color: 'rgba(254, 202, 202, 0.9)', letterSpacing: '1.5px', textTransform: 'uppercase',
           marginBottom: 4, opacity: 0,
         }}>
           Hari spesialnya orang favorit aku
@@ -211,7 +211,7 @@ export default function SplashScreen({ onStart }) {
         <h1 ref={line2Ref} style={{
           fontFamily: 'var(--font-display)', fontSize: '2.6rem', color: '#fff',
           lineHeight: 1.15, marginBottom: 10, opacity: 0,
-          textShadow: '0 4px 20px rgba(59, 130, 246, 0.7), 0 0 35px rgba(122, 154, 96, 0.5)',
+          textShadow: '0 4px 20px rgba(220, 38, 38, 0.7), 0 0 35px rgba(185, 28, 28, 0.5)',
         }}>
           Zaid
         </h1>
@@ -221,8 +221,8 @@ export default function SplashScreen({ onStart }) {
           <div className="birthday-greeting-box">
             <p style={{
               fontFamily: 'var(--font-display)', fontSize: '1.3rem',
-              color: '#dcfce7', margin: 0, lineHeight: 1.3,
-              textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+              color: '#ffe4e6', margin: 0, lineHeight: 1.3,
+              textShadow: '0 2px 10px rgba(0,0,0,0.7)',
             }}>
               "Selamat Ulang Tahun, Zaid"
             </p>
@@ -230,7 +230,7 @@ export default function SplashScreen({ onStart }) {
 
           <p style={{
             fontFamily: 'var(--font-cute)', fontSize: '0.8rem',
-            color: '#bfdbfe', fontWeight: 600, marginBottom: 20,
+            color: '#fca5a5', fontWeight: 600, marginBottom: 20,
             letterSpacing: '0.4px'
           }}>
             Kado kecil buat nemenin hari spesial kamu hari ini.
@@ -242,11 +242,12 @@ export default function SplashScreen({ onStart }) {
           ref={btnRef}
           onClick={handleStart}
           style={{
-            opacity: 0, padding: '14px 32px', borderRadius: 60, border: 'none',
-            background: 'linear-gradient(135deg, #3b82f6 0%, #7a9a60 100%)',
+            opacity: 0, padding: '14px 32px', borderRadius: 60,
+            border: '1px solid rgba(248, 113, 113, 0.35)',
+            background: 'linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%)',
             color: '#fff', fontFamily: 'var(--font-cute)', fontSize: '0.92rem',
             fontWeight: 700, cursor: 'pointer', letterSpacing: '0.5px',
-            boxShadow: '0 8px 28px rgba(59, 130, 246, 0.4), 0 0 18px rgba(122, 154, 96, 0.4)',
+            boxShadow: '0 8px 28px rgba(220, 38, 38, 0.5), 0 0 18px rgba(185, 28, 28, 0.4)',
             transition: 'transform 0.2s ease, box-shadow 0.2s ease',
             display: 'inline-flex', alignItems: 'center', gap: 8,
           }}

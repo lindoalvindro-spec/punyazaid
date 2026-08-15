@@ -63,7 +63,7 @@ export default function FlowerScreen({ onRestart }) {
     });
   }, []);
 
-  const petalEmojis = ['🍵', '🍃', '🌿', '💙', '✨', '🍵', '🌱'];
+  const petalEmojis = ['❤️', '✨', '🌹', '❤️', '✨', '🖤', '🌹'];
 
   return (
     <div className="stage" ref={containerRef} style={{ position: 'relative', overflow: 'hidden', padding: '20px 14px' }}>
@@ -73,14 +73,14 @@ export default function FlowerScreen({ onRestart }) {
         position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none',
         backgroundImage: 'url("/background%20bunga.jpg")',
         backgroundSize: 'cover', backgroundPosition: 'center',
-        filter: 'brightness(0.95) saturate(1.1)',
-        opacity: 0.85,
+        filter: 'brightness(0.5) saturate(1.2)',
+        opacity: 0.65,
       }}>
-        {/* Soft Pink Tint Gradient Overlay */}
+        {/* Luxury Crimson Tint Gradient Overlay */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(180deg, rgba(255, 240, 245, 0.4) 0%, rgba(255, 225, 235, 0.6) 100%)',
-          backdropFilter: 'blur(2px)',
+          background: 'radial-gradient(circle at center, rgba(30, 8, 15, 0.7) 0%, rgba(10, 8, 14, 0.94) 100%)',
+          backdropFilter: 'blur(3px)',
         }} />
       </div>
 
@@ -96,7 +96,7 @@ export default function FlowerScreen({ onRestart }) {
               top: '-5%',
               fontSize: '1.2rem',
               opacity: 0,
-              filter: 'drop-shadow(0 2px 6px rgba(200,59,100,0.3))',
+              filter: 'drop-shadow(0 2px 6px rgba(220,38,38,0.5))',
             }}
           >
             {emoji}
@@ -109,12 +109,12 @@ export default function FlowerScreen({ onRestart }) {
         onClick={() => setLandscapeMode(!landscapeMode)}
         style={{
           position: 'relative', zIndex: 10, marginBottom: 12,
-          padding: '6px 16px', borderRadius: 20, border: 'none',
-          background: 'rgba(255, 255, 255, 0.88)',
+          padding: '6px 16px', borderRadius: 20, border: '1px solid rgba(220,38,38,0.4)',
+          background: 'rgba(20, 16, 22, 0.85)',
           backdropFilter: 'blur(10px)',
-          color: 'var(--pink-deep)', fontFamily: 'var(--font-cute)',
+          color: '#f87171', fontFamily: 'var(--font-cute)',
           fontSize: '0.74rem', fontWeight: 700, cursor: 'pointer',
-          boxShadow: '0 4px 14px rgba(45,16,30,0.12)',
+          boxShadow: '0 4px 14px rgba(0,0,0,0.4)',
           display: 'inline-flex', alignItems: 'center', gap: 6,
           transition: 'all 0.25s ease',
         }}
@@ -128,11 +128,11 @@ export default function FlowerScreen({ onRestart }) {
         style={{
           position: 'relative', zIndex: 5,
           width: '100%', maxWidth: landscapeMode ? '100%' : '390px',
-          background: 'linear-gradient(150deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 240, 245, 0.92) 100%)',
+          background: 'linear-gradient(150deg, #1c151a 0%, #121014 100%)',
           backdropFilter: 'blur(20px)',
           borderRadius: 28, padding: landscapeMode ? '16px' : '22px 18px',
-          border: '1.5px solid rgba(212, 163, 89, 0.35)',
-          boxShadow: '0 20px 50px rgba(45, 16, 30, 0.16), inset 0 0 25px rgba(255, 255, 255, 0.9)',
+          border: '1.5px solid rgba(220, 38, 38, 0.35)',
+          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(220, 38, 38, 0.08)',
           transition: 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
           transform: landscapeMode ? 'rotate(90deg) scale(0.92)' : 'none',
           margin: landscapeMode ? '40px 0' : '0 auto',
@@ -157,13 +157,13 @@ export default function FlowerScreen({ onRestart }) {
           >
             <img
               src="/bucket%20bunga%202%20no%20bg.png"
-              alt="Flowers for my Pretty Girl"
+              alt="Flowers for my Zaid"
               style={{
                 width: '100%',
                 maxWidth: landscapeMode ? '180px' : '220px',
                 height: 'auto',
                 objectFit: 'contain',
-                filter: 'drop-shadow(0 12px 28px rgba(200, 59, 100, 0.28))',
+                filter: 'drop-shadow(0 12px 28px rgba(220, 38, 38, 0.35))',
               }}
               onError={(e) => { e.target.src = '/bunga%20buket%202%20no%20bg.png'; }}
             />
@@ -183,7 +183,7 @@ export default function FlowerScreen({ onRestart }) {
               <div style={{
                 fontSize: '1.1rem',
                 fontFamily: 'var(--font-display)',
-                color: '#4a6b34',
+                color: '#f87171',
                 fontStyle: 'italic',
                 lineHeight: 1.1,
               }}>
@@ -192,11 +192,11 @@ export default function FlowerScreen({ onRestart }) {
               <h2 style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: landscapeMode ? '2.1rem' : '2.5rem',
-                color: '#1e40af',
+                color: '#ef4444',
                 lineHeight: 1.05,
                 margin: '2px 0 0 0',
                 letterSpacing: '-0.5px',
-                textShadow: '0 2px 10px rgba(59, 130, 246, 0.2)',
+                textShadow: '0 2px 14px rgba(220, 38, 38, 0.5)',
               }}>
                 Zaid
               </h2>
@@ -204,14 +204,14 @@ export default function FlowerScreen({ onRestart }) {
 
             {/* Letter Content Card */}
             <div style={{
-              background: 'rgba(255, 255, 255, 0.88)',
+              background: '#161318',
               borderRadius: 18,
               padding: '14px 16px',
-              border: '1px solid rgba(122, 154, 96, 0.3)',
-              boxShadow: '0 4px 16px rgba(15, 23, 42, 0.06)',
+              border: '1px solid rgba(220, 38, 38, 0.3)',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.4)',
               lineHeight: 1.75,
               fontSize: '0.86rem',
-              color: 'var(--berry)',
+              color: '#f1f5f9',
               textAlign: 'left',
             }}>
               <p style={{ marginBottom: 12, fontWeight: 500 }}>
@@ -219,12 +219,12 @@ export default function FlowerScreen({ onRestart }) {
               </p>
               
               <div style={{
-                borderTop: '1px dashed rgba(122, 154, 96, 0.35)',
+                borderTop: '1px dashed rgba(220, 38, 38, 0.35)',
                 paddingTop: 10,
                 marginTop: 10,
                 fontFamily: 'var(--font-display)',
                 fontSize: '1.25rem',
-                color: '#1e40af',
+                color: '#ef4444',
                 lineHeight: 1.35,
               }}>
                 Selamat Ulang Tahun, Sayang!

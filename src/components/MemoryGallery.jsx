@@ -108,16 +108,16 @@ export default function MemoryGallery({ onNext }) {
       <div className="gallery-header" style={{ textAlign: 'center', marginBottom: 24, width: '100%', maxWidth: 390, position: 'relative', zIndex: 2 }}>
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
-          padding: '5px 14px', borderRadius: 20, background: 'rgba(122,154,96,0.15)',
-          border: '1px solid rgba(122,154,96,0.35)', marginBottom: 10
+          padding: '5px 14px', borderRadius: 20, background: 'rgba(220, 38, 38, 0.2)',
+          border: '1px solid rgba(239, 68, 68, 0.35)', marginBottom: 10
         }}>
-          <Sparkles size={13} color="#4a6b34" />
-          <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#4a6b34', letterSpacing: 1.5, textTransform: 'uppercase' }}>
+          <Sparkles size={13} color="#ef4444" />
+          <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#f87171', letterSpacing: 1.5, textTransform: 'uppercase' }}>
             Koleksi Kenangan
           </span>
         </div>
         <h1 style={{
-          fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: '#1e40af',
+          fontFamily: 'var(--font-display)', fontSize: '2.2rem', color: '#ffffff',
           lineHeight: 1.15, marginBottom: 6, letterSpacing: '-0.5px'
         }}>
           Galeri Foto Zaid
@@ -127,9 +127,9 @@ export default function MemoryGallery({ onNext }) {
       {/* Main Exhibition Frame */}
       <div className="gallery-frame" style={{
         width: '100%', maxWidth: 370, padding: 16, marginBottom: 24,
-        background: '#ffffff', borderRadius: 28,
-        border: '1.5px solid rgba(96,165,250,0.3)',
-        boxShadow: '0 20px 50px rgba(15,23,42,0.12), 0 2px 10px rgba(122,154,96,0.1)',
+        background: 'linear-gradient(180deg, #1c1519 0%, #121014 100%)', borderRadius: 28,
+        border: '1.5px solid rgba(220, 38, 38, 0.35)',
+        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), 0 2px 10px rgba(220, 38, 38, 0.2)',
         position: 'relative',
       }}>
         {/* Top Tag Bar */}
@@ -138,13 +138,13 @@ export default function MemoryGallery({ onNext }) {
           marginBottom: 12, padding: '0 4px'
         }}>
           <span style={{
-            fontSize: '0.7rem', fontWeight: 800, color: 'var(--gold-accent)',
+            fontSize: '0.7rem', fontWeight: 800, color: '#ef4444',
             letterSpacing: 1.5, textTransform: 'uppercase'
           }}>
             {current.tag}
           </span>
           <span style={{
-            fontFamily: 'var(--font-display)', fontSize: '1.1rem', color: 'var(--berry)',
+            fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: '#ffffff',
             fontWeight: 700
           }}>
             {current.title}
@@ -154,8 +154,9 @@ export default function MemoryGallery({ onNext }) {
         {/* Photo Container */}
         <div style={{
           position: 'relative', width: '100%', aspectRatio: '3/4', 
-          borderRadius: 20, overflow: 'hidden', background: 'var(--pink-whisper)',
-          boxShadow: 'inset 0 0 20px rgba(0,0,0,0.1)',
+          borderRadius: 20, overflow: 'hidden', background: '#121014',
+          boxShadow: 'inset 0 0 20px rgba(0,0,0,0.5)',
+          border: '1px solid rgba(220, 38, 38, 0.2)',
         }}>
           <img
             id="gallery-photo"
@@ -174,10 +175,10 @@ export default function MemoryGallery({ onNext }) {
             onClick={() => setLightbox(true)}
             style={{
               position: 'absolute', top: 12, right: 12, width: 36, height: 36,
-              borderRadius: '50%', background: 'rgba(255,255,255,0.85)',
-              backdropFilter: 'blur(8px)', border: 'none', color: 'var(--pink-deep)',
+              borderRadius: '50%', background: 'rgba(20, 18, 24, 0.85)',
+              backdropFilter: 'blur(8px)', border: '1px solid rgba(220,38,38,0.4)', color: '#f87171',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              cursor: 'pointer', boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
               transition: 'transform 0.15s ease'
             }}
             onPointerDown={(e) => e.currentTarget.style.transform = 'scale(0.9)'}
@@ -191,10 +192,10 @@ export default function MemoryGallery({ onNext }) {
             onClick={prevSlide}
             style={{
               position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)',
-              width: 34, height: 34, borderRadius: '50%', background: 'rgba(255,255,255,0.75)',
-              backdropFilter: 'blur(6px)', border: 'none', color: 'var(--berry)',
+              width: 34, height: 34, borderRadius: '50%', background: 'rgba(20, 18, 24, 0.8)',
+              backdropFilter: 'blur(6px)', border: '1px solid rgba(220,38,38,0.4)', color: '#ffffff',
               display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+              boxShadow: '0 4px 12px rgba(0,0,0,0.4)'
             }}
           >
             <ChevronLeft size={18} />
@@ -203,10 +204,10 @@ export default function MemoryGallery({ onNext }) {
             onClick={nextSlide}
             style={{
               position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
-              width: 34, height: 34, borderRadius: '50%', background: 'rgba(255,255,255,0.75)',
-              backdropFilter: 'blur(6px)', border: 'none', color: 'var(--berry)',
+              width: 34, height: 34, borderRadius: '50%', background: 'rgba(20, 18, 24, 0.8)',
+              backdropFilter: 'blur(6px)', border: '1px solid rgba(220,38,38,0.4)', color: '#ffffff',
               display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+              boxShadow: '0 4px 12px rgba(0,0,0,0.4)'
             }}
           >
             <ChevronRight size={18} />
@@ -227,10 +228,10 @@ export default function MemoryGallery({ onNext }) {
             onClick={() => selectThumbnail(i)}
             style={{
               width: i === idx ? 48 : 36, height: 48, borderRadius: 10, overflow: 'hidden',
-              border: i === idx ? '2px solid var(--pink-deep)' : '1.5px solid transparent',
+              border: i === idx ? '2px solid #ef4444' : '1.5px solid transparent',
               opacity: i === idx ? 1 : 0.6,
               transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)', cursor: 'pointer',
-              flexShrink: 0, boxShadow: i === idx ? '0 4px 12px rgba(200,59,100,0.3)' : 'none',
+              flexShrink: 0, boxShadow: i === idx ? '0 4px 12px rgba(220,38,38,0.5)' : 'none',
             }}
           >
             <img src={item.src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -243,7 +244,7 @@ export default function MemoryGallery({ onNext }) {
         <div
           onClick={() => setLightbox(false)}
           style={{
-            position: 'fixed', inset: 0, background: 'rgba(15, 5, 10, 0.92)',
+            position: 'fixed', inset: 0, background: 'rgba(8, 6, 10, 0.95)',
             backdropFilter: 'blur(16px)', zIndex: 9999, display: 'flex',
             alignItems: 'center', justifyContent: 'center', padding: 20, cursor: 'pointer'
           }}
@@ -252,7 +253,7 @@ export default function MemoryGallery({ onNext }) {
             onClick={() => setLightbox(false)}
             style={{
               position: 'absolute', top: 20, right: 20, width: 42, height: 42,
-              borderRadius: '50%', background: 'rgba(255,255,255,0.2)', border: 'none',
+              borderRadius: '50%', background: 'rgba(255,255,255,0.15)', border: 'none',
               color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
               cursor: 'pointer'
             }}
@@ -260,9 +261,9 @@ export default function MemoryGallery({ onNext }) {
             <X size={22} />
           </button>
 
-          <div style={{ maxWidth: '90vw', maxHeight: '85vh', borderRadius: 20, overflow: 'hidden', border: '2px solid var(--gold-accent)', boxShadow: '0 20px 60px rgba(0,0,0,0.6)' }}>
+          <div style={{ maxWidth: '90vw', maxHeight: '85vh', borderRadius: 20, overflow: 'hidden', border: '2px solid rgba(239,68,68,0.6)', boxShadow: '0 20px 60px rgba(0,0,0,0.8)' }}>
             <img src={current.src} alt={current.title} style={{ width: '100%', height: '100%', objectFit: 'contain', maxHeight: '80vh' }} />
-            <div style={{ padding: '12px', background: 'rgba(30,10,20,0.85)', textAlign: 'center', color: 'var(--gold-light)', fontFamily: 'var(--font-display)', fontSize: '1.2rem' }}>
+            <div style={{ padding: '12px', background: 'rgba(20,10,15,0.92)', textAlign: 'center', color: '#f87171', fontFamily: 'var(--font-display)', fontSize: '1.2rem' }}>
               {current.tag}: {current.title}
             </div>
           </div>

@@ -71,9 +71,9 @@ export default function PinScreen({ onUnlock }) {
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 18 }}>
           <div ref={lockRef} style={{
             width: 62, height: 62, borderRadius: '50%',
-            background: 'linear-gradient(145deg, #7a9a60, #3b82f6)',
+            background: 'linear-gradient(145deg, #ef4444, #991b1b)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 8px 28px rgba(59, 130, 246, 0.3)', color: '#fff',
+            boxShadow: '0 8px 28px rgba(220, 38, 38, 0.45)', color: '#fff',
           }}>
             <Lock size={26} strokeWidth={2.3} />
           </div>
@@ -81,13 +81,13 @@ export default function PinScreen({ onUnlock }) {
 
         {/* Title */}
         <h1 style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.9rem', color: 'var(--berry)',
+          fontFamily: 'var(--font-display)', fontSize: '1.9rem', color: '#ffffff',
           textAlign: 'center', lineHeight: 1.2, marginBottom: 4,
         }}>
           Pintu Rahasia Buat Zaid
         </h1>
         <p style={{
-          fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: '#2563eb',
+          fontFamily: 'var(--font-cute)', fontSize: '0.84rem', color: '#f87171',
           textAlign: 'center', fontWeight: 600, marginBottom: 22, opacity: 0.9,
         }}>
           Masukin PIN rahasianya dulu yaa
@@ -102,10 +102,10 @@ export default function PinScreen({ onUnlock }) {
                 width: 44, height: 44, borderRadius: 14,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 background: filled
-                  ? 'linear-gradient(135deg, #7a9a60, #3b82f6)'
-                  : 'rgba(255,255,255,0.85)',
-                border: filled ? 'none' : '2px dashed #93c5fd',
-                boxShadow: filled ? '0 4px 16px rgba(59, 130, 246, 0.3)' : 'none',
+                  ? 'linear-gradient(135deg, #dc2626, #7f1d1d)'
+                  : 'rgba(255,255,255,0.06)',
+                border: filled ? '1px solid rgba(248,113,113,0.4)' : '2px dashed rgba(220,38,38,0.4)',
+                boxShadow: filled ? '0 4px 16px rgba(220, 38, 38, 0.4)' : 'none',
                 transition: 'all 0.2s ease',
               }}>
                 {filled && <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 700 }}>•</span>}
@@ -117,10 +117,10 @@ export default function PinScreen({ onUnlock }) {
         {/* Error */}
         {error && (
           <div style={{
-            background: 'rgba(212,69,108,0.12)', color: '#dc2626',
+            background: 'rgba(220,38,38,0.2)', color: '#fca5a5',
             padding: '8px 14px', borderRadius: 14, fontSize: '0.8rem', fontWeight: 600,
             marginBottom: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-            border: '1px solid rgba(212,69,108,0.25)',
+            border: '1px solid rgba(239,68,68,0.4)',
           }}>
             <AlertCircle size={14} /> Kodenya salah tuh, masa lupa sih? Coba lagi yaa
           </div>
@@ -141,13 +141,13 @@ export default function PinScreen({ onUnlock }) {
               }}
               style={{
                 height: 52, borderRadius: 14,
-                border: isAction ? 'none' : '1px solid rgba(212,163,89,0.3)',
-                background: isAction ? 'rgba(248,164,190,0.2)' : 'rgba(255,255,255,0.85)',
-                color: isAction ? 'var(--pink-deep)' : 'var(--berry)',
+                border: isAction ? '1px solid rgba(239,68,68,0.3)' : '1px solid rgba(255,255,255,0.1)',
+                background: isAction ? 'rgba(220,38,38,0.25)' : 'rgba(255,255,255,0.06)',
+                color: isAction ? '#fca5a5' : '#ffffff',
                 fontFamily: 'var(--font-cute)',
-                fontSize: isAction ? '0.8rem' : '1.15rem',
+                fontSize: isAction ? '0.85rem' : '1.2rem',
                 fontWeight: 700, cursor: 'pointer',
-                boxShadow: isAction ? 'none' : '0 3px 10px rgba(45,16,30,0.06)',
+                boxShadow: isAction ? 'none' : '0 3px 10px rgba(0,0,0,0.3)',
                 transition: 'transform 0.1s, background 0.15s',
               }}
               onPointerDown={(e) => { e.currentTarget.style.transform = 'scale(0.93)'; }}

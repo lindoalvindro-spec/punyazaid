@@ -141,9 +141,9 @@ export default function BirthdayCake({ onShowGallery }) {
 
   const bgParticles = [
     { emoji: '✨', top: '10%', left: '8%', size: '1.1rem' },
-    { emoji: '💙', top: '22%', right: '10%', size: '1rem' },
+    { emoji: '❤️', top: '22%', right: '10%', size: '1rem' },
     { emoji: '✨', bottom: '25%', left: '10%', size: '1rem' },
-    { emoji: '💙', bottom: '20%', right: '12%', size: '1rem' },
+    { emoji: '❤️', bottom: '20%', right: '12%', size: '1rem' },
   ];
 
   return (
@@ -156,7 +156,7 @@ export default function BirthdayCake({ onShowGallery }) {
             position: 'absolute',
             top: p.top, left: p.left, right: p.right, bottom: p.bottom,
             fontSize: p.size, pointerEvents: 'none', zIndex: 0, opacity: 0.65,
-            filter: 'drop-shadow(0 0 8px rgba(59,130,246,0.4))'
+            filter: 'drop-shadow(0 0 8px rgba(220,38,38,0.5))'
           }}
         >
           {p.emoji}
@@ -165,23 +165,23 @@ export default function BirthdayCake({ onShowGallery }) {
 
       <div ref={cardRef} className="glass" style={{
         width: '100%', maxWidth: '370px', padding: '28px 22px', textAlign: 'center', opacity: 0,
-        background: 'linear-gradient(170deg, #ffffff 0%, #f0f9ff 50%, #ecf8e5 100%)',
+        background: 'linear-gradient(170deg, #1f161b 0%, #131014 100%)',
         border: '1.5px solid var(--glass-border)',
-        boxShadow: '0 20px 50px rgba(15,23,42,0.14), inset 0 0 30px rgba(255,255,255,0.8)',
+        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(220, 38, 38, 0.1)',
         borderRadius: 28, position: 'relative', zIndex: 1,
       }}>
         {/* Header Title */}
         <div style={{ marginBottom: 20 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-            <Sparkles size={18} color="#7a9a60" />
+            <Sparkles size={18} color="#ef4444" />
             <h2 style={{
-              fontFamily: 'var(--font-display)', fontSize: '2.1rem', color: 'var(--berry)',
+              fontFamily: 'var(--font-display)', fontSize: '2.1rem', color: '#ffffff',
               lineHeight: 1.15, marginBottom: 4
             }}>Make a Wish, Zaid</h2>
-            <Sparkles size={18} color="#3b82f6" />
+            <Sparkles size={18} color="#ef4444" />
           </div>
           <p style={{
-            fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: '#2563eb',
+            fontFamily: 'var(--font-cute)', fontSize: '0.86rem', color: '#f87171',
             fontWeight: 600, margin: 0, opacity: 0.9, transition: 'all 0.3s ease'
           }}>
             {lit ? 'Pejamkan mata, minta harapan terbaik kamu, terus tiup lilinnya yaa' : 'Harapan baik kamu udah tercatat, semoga terkabul yaa'}
@@ -232,20 +232,20 @@ export default function BirthdayCake({ onShowGallery }) {
                 {/* Candle Stick */}
                 <div style={{
                   width: 9, height: 36, borderRadius: '6px 6px 3px 3px',
-                  background: `linear-gradient(180deg, ${['#3b82f6', '#7a9a60', '#60a5fa'][i]} 0%, #ffffff 100%)`,
-                  border: '1px solid rgba(255,255,255,0.8)',
-                  boxShadow: '0 3px 6px rgba(15,23,42,0.18)',
+                  background: `linear-gradient(180deg, ${['#ef4444', '#991b1b', '#f87171'][i]} 0%, #1e1e24 100%)`,
+                  border: '1px solid rgba(255,255,255,0.4)',
+                  boxShadow: '0 3px 6px rgba(0,0,0,0.4)',
                 }} />
               </div>
             ))}
           </div>
 
-          {/* Top Tier (Matcha Cream Tier) */}
+          {/* Top Tier (Red Velvet Cream Tier) */}
           <div style={{
             position: 'absolute', top: 62, left: '50%', transform: 'translateX(-50%)',
             width: 160, height: 50, borderRadius: '18px 18px 12px 12px',
-            background: 'linear-gradient(180deg, #a3c985 0%, #4a6b34 100%)',
-            boxShadow: 'inset 0 4px 10px rgba(255,255,255,0.6), 0 6px 16px rgba(15,23,42,0.15)',
+            background: 'linear-gradient(180deg, #ef4444 0%, #991b1b 100%)',
+            boxShadow: 'inset 0 4px 10px rgba(255,255,255,0.4), 0 6px 16px rgba(0,0,0,0.4)',
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, zIndex: 4,
           }}>
             <span style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 700 }}>✨</span>
@@ -259,29 +259,29 @@ export default function BirthdayCake({ onShowGallery }) {
             {[10, 14, 9, 13, 11, 15, 10].map((h, i) => (
               <div key={i} style={{
                 width: 12, height: h, borderRadius: '0 0 6px 6px',
-                background: 'linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%)',
-                boxShadow: '0 2px 4px rgba(15,23,42,0.1)',
+                background: 'linear-gradient(180deg, #ffffff 0%, #fee2e2 100%)',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.3)',
               }} />
             ))}
           </div>
 
-          {/* Bottom Tier (Ocean & Matcha Cream Tier) */}
+          {/* Bottom Tier (Obsidian Black & Ruby Tier) */}
           <div style={{
             position: 'absolute', top: 110, left: '50%', transform: 'translateX(-50%)',
             width: 216, height: 72, borderRadius: '22px',
-            background: 'linear-gradient(180deg, #ffffff 0%, #eff6ff 60%, #e0f2fe 100%)',
-            border: '1.5px solid rgba(122,154,96,0.35)',
-            boxShadow: '0 10px 28px rgba(15,23,42,0.12), inset 0 3px 8px rgba(255,255,255,0.9)',
+            background: 'linear-gradient(180deg, #241419 0%, #151014 100%)',
+            border: '1.5px solid rgba(220, 38, 38, 0.4)',
+            boxShadow: '0 10px 28px rgba(0,0,0,0.6), inset 0 3px 8px rgba(220, 38, 38, 0.2)',
             display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3,
             paddingTop: 8,
           }}>
             <div style={{
-              background: 'linear-gradient(135deg, rgba(96,165,250,0.15), rgba(163,201,133,0.25))',
-              padding: '6px 18px', borderRadius: 20, border: '1px dashed rgba(122,154,96,0.4)',
+              background: 'rgba(220, 38, 38, 0.25)',
+              padding: '6px 18px', borderRadius: 20, border: '1px dashed rgba(239, 68, 68, 0.5)',
               display: 'inline-flex', alignItems: 'center', gap: 6,
             }}>
               <span style={{
-                fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: '#1e40af',
+                fontFamily: 'var(--font-display)', fontSize: '1.35rem', color: '#ef4444',
                 fontWeight: 700, letterSpacing: '0.5px', margin: 0, lineHeight: 1.1
               }}>
                 Happy Birthday, Zaid!
@@ -293,15 +293,15 @@ export default function BirthdayCake({ onShowGallery }) {
           <div style={{
             position: 'absolute', bottom: 10, left: '50%', transform: 'translateX(-50%)',
             width: 246, height: 18, borderRadius: '0 0 50% 50% / 0 0 100% 100%',
-            background: 'linear-gradient(180deg, #ffffff 0%, #f4e8eb 100%)',
-            border: '1.5px solid rgba(212,163,89,0.3)', boxShadow: '0 8px 18px rgba(0,0,0,0.08)', zIndex: 2,
+            background: 'linear-gradient(180deg, #2a2026 0%, #100c10 100%)',
+            border: '1.5px solid rgba(220,38,38,0.3)', boxShadow: '0 8px 18px rgba(0,0,0,0.5)', zIndex: 2,
           }} />
 
           {/* Shadow underneath plate */}
           <div style={{
             position: 'absolute', bottom: 2, left: '50%', transform: 'translateX(-50%)',
             width: 220, height: 10, borderRadius: '50%',
-            background: 'rgba(45,16,30,0.12)', filter: 'blur(5px)', zIndex: 1
+            background: 'rgba(0,0,0,0.6)', filter: 'blur(5px)', zIndex: 1
           }} />
         </div>
 
@@ -309,13 +309,13 @@ export default function BirthdayCake({ onShowGallery }) {
         {!lit && (
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
-            background: 'linear-gradient(135deg, rgba(212,163,89,0.15), rgba(248,164,190,0.2))',
+            background: 'rgba(220,38,38,0.2)',
             padding: '8px 18px', borderRadius: 20, marginBottom: 20,
-            border: '1px solid rgba(212,163,89,0.3)',
+            border: '1px solid rgba(239,68,68,0.4)',
           }}>
-            <Sparkles size={15} color="var(--pink-deep)" />
+            <Sparkles size={15} color="#ef4444" />
             <span style={{
-              fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: 'var(--pink-deep)', fontWeight: 700
+              fontFamily: 'var(--font-cute)', fontSize: '0.82rem', color: '#fca5a5', fontWeight: 700
             }}>
               Lilinnya udah padam, yeay!
             </span>
